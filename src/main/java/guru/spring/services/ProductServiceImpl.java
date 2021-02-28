@@ -12,11 +12,7 @@ import guru.spring.domain.Product;
 
 @Service
 public class ProductServiceImpl extends AbstractMapService implements ProductService {
-
 	
-//	public ProductServiceImpl() {
-//		loadDoaminObjects();
-//	}
 	
 	@Override
 	public List<DomainObject> listAll() {
@@ -41,7 +37,7 @@ public class ProductServiceImpl extends AbstractMapService implements ProductSer
 	
 	
 	@Override
-	protected void loadDoaminObjects() {
+	protected void loadDomainObjects() {
 		domainMap = new HashMap<>();
 		
 		Product product1 = new Product();

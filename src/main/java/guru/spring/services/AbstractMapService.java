@@ -15,7 +15,7 @@ public abstract class AbstractMapService {
 	
 	public AbstractMapService() {
 		domainMap = new HashMap<>();
-		loadDoaminObjects();
+		loadDomainObjects();
 	}
 	
 	public List<DomainObject> listAll() {
@@ -54,5 +54,5 @@ public abstract class AbstractMapService {
 	/*
 	 * Load objects into map
 	 */
-	protected abstract void loadDoaminObjects();
+	protected abstract void loadDomainObjects();
 }
