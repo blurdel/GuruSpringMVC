@@ -1,4 +1,4 @@
-package guru.spring.services;
+package guru.spring.services.mapservices;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +15,7 @@ public abstract class AbstractMapService {
 	
 	public AbstractMapService() {
 		domainMap = new HashMap<>();
-		loadDomainObjects();
+//		loadDomainObjects();
 	}
 	
 	public List<DomainObject> listAll() {
@@ -54,5 +54,5 @@ public abstract class AbstractMapService {
 	/*
 	 * Load objects into map
 	 */
-	protected abstract void loadDomainObjects();
+//	protected abstract void loadDomainObjects();
 }

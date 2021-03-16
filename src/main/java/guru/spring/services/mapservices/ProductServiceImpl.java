@@ -1,16 +1,17 @@
-package guru.spring.services;
+package guru.spring.services.mapservices;
 
-import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.spring.domain.DomainObject;
 import guru.spring.domain.Product;
+import guru.spring.services.ProductService;
 
 
 @Service
+@Profile("map")
 public class ProductServiceImpl extends AbstractMapService implements ProductService {
 	
 	
@@ -35,7 +36,7 @@ public class ProductServiceImpl extends AbstractMapService implements ProductSer
 		super.delete(id);
 	}
 	
-	
+/*	
 	@Override
 	protected void loadDomainObjects() {
 		domainMap = new HashMap<>();
@@ -75,5 +76,5 @@ public class ProductServiceImpl extends AbstractMapService implements ProductSer
         product1.setImageUrl("http://www.example.com/product5.jpg");
         domainMap.put(5,product1);
 	}
-		
+*/
 }

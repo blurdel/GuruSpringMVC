@@ -1,15 +1,17 @@
-package guru.spring.services;
+package guru.spring.services.mapservices;
 
-import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.spring.domain.Customer;
 import guru.spring.domain.DomainObject;
+import guru.spring.services.CustomerService;
 
 
 @Service
+@Profile("map")
 public class CustomerServiceImpl extends AbstractMapService implements CustomerService {
 
 	
@@ -33,7 +35,7 @@ public class CustomerServiceImpl extends AbstractMapService implements CustomerS
         super.delete(id);
     }
 	
-	
+/*	
 	@Override
     protected void loadDomainObjects() {
         domainMap = new HashMap<>();
@@ -75,5 +77,5 @@ public class CustomerServiceImpl extends AbstractMapService implements CustomerS
         domainMap.put(2, customer2);
         domainMap.put(3, customer3);
     }
-	
+*/	
 }

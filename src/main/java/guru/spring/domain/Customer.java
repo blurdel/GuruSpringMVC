@@ -1,9 +1,11 @@
 package guru.spring.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Version;
 
 
@@ -27,6 +29,10 @@ public class Customer implements DomainObject {
     private String state;
     private String zipCode;
     
+    @OneToOne(cascade = {CascadeType.ALL})
+    private User user;
+    
+
 	@Override
 	public Integer getId() {
 		return id;
@@ -98,13 +104,27 @@ public class Customer implements DomainObject {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", version=" + version + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", addressLine1=" + addressLine1
 				+ ", addressLine2=" + addressLine2 + ", city=" + city + ", state=" + state + ", zipCode=" + zipCode
-				+ "]";
+				+ ", user=" + user + "]";
 	}
+
+//	@Override
+//	public String toString() {
+//		return "Customer [id=" + id + ", version=" + version + ", firstName=" + firstName + ", lastName=" + lastName
+//				+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", addressLine1=" + addressLine1
+//				+ ", addressLine2=" + addressLine2 + ", city=" + city + ", state=" + state + ", zipCode=" + zipCode
+//				+ "]";
+//	}
 
 }
