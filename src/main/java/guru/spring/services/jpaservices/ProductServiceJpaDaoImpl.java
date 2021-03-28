@@ -12,7 +12,7 @@ import guru.spring.services.ProductService;
 
 
 @Service
-@Profile("jpadao")
+@Profile("jpadao-nope")
 public class ProductServiceJpaDaoImpl extends AbstractJpaDaoService implements ProductService {
 
 	
